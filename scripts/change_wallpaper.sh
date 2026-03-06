@@ -81,13 +81,13 @@ if [ "$1" == "--restore" ]; then
 fi
 
 # Generate Menu Options
-OPT_FILL="󰕰  Fill All (Single Image)"
-OPT_SPLIT="󰝚  Split Wide Image (Across $NUM_MONS Screens)"
-OPT_DISTINCT="󰄬  Distinct (Select for each)"
+OPT_FILL="$ Fill All (Single Image)"
+OPT_SPLIT="$ Split Wide Image (Across $NUM_MONS Screens)"
+OPT_DISTINCT="$ Distinct (Select for each)"
 
 MON_OPTIONS=""
 for ((i=0; i<NUM_MONS; i++)); do
-    MON_OPTIONS+="󰍹  Monitor $((i+1)): ${MON_NAMES[$i]}\n"
+    MON_OPTIONS+="$ Monitor $((i+1)): ${MON_NAMES[$i]}\n"
 done
 
 CHOICE=$(echo -e "$OPT_FILL\n$OPT_SPLIT\n$OPT_DISTINCT\n$MON_OPTIONS" | rofi -dmenu -p "SWWW Wallpaper" -i -l 6)
